@@ -10,7 +10,7 @@ public class HibernateUtil
 	public static SessionFactory getSessionFactory()
 	{
 		private SessionFactory sessionFactory;
-		private static final ServiceRegistry serviceRegistry;
+		private ServiceRegistry serviceRegistry;
 			
 		Configuration configuration = new Configuration();
 		configuration.configure();
