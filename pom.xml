@@ -59,7 +59,21 @@
 			<version>${wicket.version}</version>
 		</dependency>
 		-->
-
+		
+		<!-- Hibernate DEPENDENCIES -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.2.7.SP1</version>
+		</dependency>
+        
+        <!-- H2 Dependency -->
+        <dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.3.174</version>
+		</dependency>
+             
 		<!-- LOGGING DEPENDENCIES - LOG4J -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
