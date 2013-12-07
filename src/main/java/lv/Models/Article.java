@@ -1,9 +1,26 @@
 package lv.Models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.CollectionId;
+@Entity
+@Table(name = "Article")
 public class Article 
 {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int article_id;
+	
+	@Column(name = "Article_short", nullable=false)
 	private String article_short;
+	
+	@Column(name = "Article_Full" , nullable=false)
 	private String article_full;
 	
 	public Article(){}
@@ -30,5 +47,4 @@ public class Article
 	public void setArticle_full(String article_full) {
 		this.article_full = article_full;
 	}
-	
 }

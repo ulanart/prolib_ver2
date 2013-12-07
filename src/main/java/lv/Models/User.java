@@ -1,10 +1,27 @@
 package lv.Models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Users")
 public class User 
 {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int user_id;
+	
+	@Column(name = "user_email", nullable = false)
 	private String email;
+	
+	@Column(name = "user", nullable = false)
 	private String username;
+	
+	@Column(name = "pass", nullable = false)
 	private String password;
 	
 	public User(){}

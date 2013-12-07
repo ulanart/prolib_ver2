@@ -1,21 +1,28 @@
 package lv.utils;
 
+import lv.Models.Article;
+import lv.Models.User;
+import lv.Models.Video;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.service.ServiceRegistry;
-import org.hibernate.service.ServiceRegistryBuilder;
 
-public class HibernateUtil
-{
-	public static SessionFactory getSessionFactory()
-	{
-		private SessionFactory sessionFactory;
-		private ServiceRegistry serviceRegistry;
-			
-		Configuration configuration = new Configuration();
-		configuration.configure();
-		serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();        
-		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-		return sessionFactory;
-	}
+@SuppressWarnings("deprecation")
+public class HibernateUtil {
+
+    private static final SessionFactory sessionFactory;
+    	static 
+    	{
+    		Configuration configuration = new Configuration();
+    		configuration.configure();
+    		configuration.addAnnotatedClass(User.class);
+    		configuration.addAnnotatedClass(Article.class);
+    		configuration.addAnnotatedClass(Video.class);
+    		sessionFactory = configuration.buildSessionFactory();
+    	}
+    public static SessionFactory getSessionFactory(){
+        return sessionFactory;
+    }
+
+
 }
