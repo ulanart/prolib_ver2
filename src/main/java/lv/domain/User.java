@@ -1,4 +1,4 @@
-package lv.Models;
+package lv.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

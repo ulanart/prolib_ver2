@@ -1,8 +1,8 @@
 package lv.utils;
 
-import lv.Models.Article;
-import lv.Models.User;
-import lv.Models.Video;
+import lv.domain.Article;
+import lv.domain.User;
+import lv.domain.Video;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -1,9 +1,7 @@
-package lv.DAO;
+package lv.domain;
 
 import java.sql.SQLException;
 import java.util.Collection;
-
-import lv.Models.User;
 
 public interface UserDAO 
 {

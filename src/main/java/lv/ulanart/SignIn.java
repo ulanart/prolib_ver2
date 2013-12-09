@@ -28,14 +28,6 @@ public class SignIn extends WebPage
 		pass = new TextField("pass",new Model());
 		signin.add(pass);
 		
-		signin.add(new Button ("button")
-		{
-			@Override
-			public void onSubmit()
-			{
-				setResponsePage(Index.class);
-			}
-		});
 		signin.add(new Link("recoverylnk")
 		{
 			@Override
@@ -44,7 +36,6 @@ public class SignIn extends WebPage
 				setResponsePage(recovery.class);
 			}
 		});
-		/*
 		signin.add(new Link("register")
 		{
 			@Override
@@ -53,7 +44,6 @@ public class SignIn extends WebPage
 				setResponsePage(SignUp.class);
 			}
 		});
-		*/
 	add(signin);
 	}
 }

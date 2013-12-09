@@ -1,4 +1,4 @@
-package lv.Models;
+package lv.domain;
 
 public class Video 
 {

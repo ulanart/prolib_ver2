@@ -33,5 +33,6 @@ public class recovery extends WebPage
 				email.setModelObject("");
 			}
 		});
+	add(recovery);
 	}
 }
