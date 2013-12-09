@@ -5,7 +5,7 @@
 <hibernate-configuration>
 	<session-factory>
 	<property name="hibernate.connection.driver_class">org.h2.Driver</property>
-	<property name="hibernate.connection.url">jdbc:h2:http://localhost/prolib</property>
+	<property name="hibernate.connection.url">jdbc:h2:./db/repository</property>
 	<property name="hibernate.connection.username">admin</property>
 	<property name="hibernate.connection.password">password</property>
 	<property name="hibernate.default_schema">PUBLIC</property>

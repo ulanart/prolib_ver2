@@ -39,7 +39,6 @@ public class SignUp extends WebPage
 		//add Button
 		sign.add(new Button("button")
 		{
-			User user = new User();
 			@Override
 			public void onSubmit()
 			{
@@ -48,7 +47,7 @@ public class SignUp extends WebPage
 				String Uval = (String)userField.getModelObject();
 				String Pval = (String)passField.getModelObject();
 				
-				
+				User user = new User();
 				user.setEmail(Eval);
 				user.setUsername(Uval);
 				user.setPassword(Pval);
